@@ -2,6 +2,8 @@
 /**
  * @link https://github.com/octans/WXDev
  * @author octansneu@gmail.com
+ * 
+ * 使用文档：https://github.com/octans/WXDev/blob/master/Doc/WXOAuth.md
  */
 
 /**
