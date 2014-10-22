@@ -120,14 +120,26 @@ class WXOAuth
         return self::AUTH_URL . http_build_query($params) . $wechat_redirect;
     }
     
+    /**
+     * 设置授权后的回跳地址
+     * @param string $url
+     */
     public function setRedirectUrl($url)
     {
         $this->redirectUrl = $url;
+        
+        return $this;
     }
     
+    /**
+     * 设置授权后应用内的回跳地址
+     * @param string $internalRedirectUrl
+     */
     public function setInternalRedirectUrl($internalRedirectUrl)
     {
         $this->internalRedirectUrl = $internalRedirectUrl;
+        
+        return $this;
     }
     
     /**
@@ -148,8 +160,8 @@ class WXOAuth
      * 跳转到微信oauth地址
      * 
      * @var string $scope
-     * @var string $internalRedirectUrl 微信授权后回跳的一级地址
-     * @var string $redirectUrl 微信授权后回跳的二级地址
+     * @var string $internalRedirectUrl 微信授权后应用内的跳转地址
+     * @var string $redirectUrl 微信授权后的回跳地址
      */
     public function goOAuth($scope, $internalRedirectUrl = '', $redirectUrl = '')
     {
@@ -171,7 +183,7 @@ class WXOAuth
     }
     
     /**
-     * 接收微信对用户的回跳后，向微信服务器请求用户openid或者详细信息
+     * 接收微信对用户的回跳后，向微信服务器请求用户openid或者用户的个人信息
      * @throws TMException
      * @return string|unknown
      * authdeny --- 用户拒绝授权
