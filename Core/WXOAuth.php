@@ -109,11 +109,11 @@ class WXOAuth
         }
         
         $params = array(
-                'appid' => WXConfig::APP_ID,
-                'redirect_uri' => $redirectUrl,
-                'response_type' => 'code',
-                'scope' => $this->scope,
-                'state' => $this->state,
+            'appid' => WXConfig::APP_ID,
+            'redirect_uri' => $redirectUrl,
+            'response_type' => 'code',
+            'scope' => $this->scope,
+            'state' => $this->state,
         );
         $wechat_redirect = $this->wechatRedirect ? '#wechat_redirect' : '';
         
@@ -212,10 +212,10 @@ class WXOAuth
      */
     public function requestOpenidAndAccessToken($code) {
     	$params = array(
-    			'appid' => WXConfig::APP_ID,
-    			'secret' => WXConfig::APP_SECRET,
-    			'code' => $code,
-    			'grant_type' => $this->grantType,
+    	    'appid' => WXConfig::APP_ID,
+    		'secret' => WXConfig::APP_SECRET,
+    		'code' => $code,
+    		'grant_type' => $this->grantType,
     	);
     	$url = self::ACCESS_TOKEN_URL . http_build_query($params);
     	$resArray = $this->doGetRequest($url);
@@ -251,9 +251,9 @@ class WXOAuth
     public function requestAuthUserInfo($accessToken, $openId)
     {
     	$params = array(
-    			'access_token' => $accessToken,
-    			'openid' => $openId,
-    			'lang' => 'zh_CN',
+    		'access_token' => $accessToken,
+    		'openid' => $openId,
+    		'lang' => 'zh_CN',
     	);
     	$url = self::USER_INFO_URL . http_build_query($params);
     	$resArray = $this->doGetRequest($url);
