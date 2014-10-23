@@ -6,7 +6,10 @@
 
 /**
  * 微信支付类
- * 接口调试：http://mp.weixin.qq.com/debug/cgi-bin/readtmpl?t=pay/index
+ * 
+ * 使用文档：https://github.com/octans/WXDev/blob/master/Doc/WXPay.md
+ * 
+ * 官方接口调试：http://mp.weixin.qq.com/debug/cgi-bin/readtmpl?t=pay/index
  * 
  */
 class WXPay

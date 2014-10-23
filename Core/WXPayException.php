@@ -7,7 +7,6 @@
 /**
  * WXPayException
  * 
- * 使用文档：https://github.com/octans/WXDev/blob/master/Doc/WXPay.md
  */
 class WXPayException extends Exception
 {
