@@ -39,4 +39,25 @@ class WXConfig
 	 * @const string
 	 */
 	const ACCESS_TOKEN_URL = 'https://api.weixin.qq.com/cgi-bin/token';
+	
+	/**
+	 * 财付通商户身份的标识
+	 *
+	 * @const string
+	 */
+	const PARTNER_ID = '';
+	
+	/**
+	 * 财付通商户权限密钥Key
+	 *
+	 * @const string
+	 */
+	const PARTNER_KEY = '';
+	
+	/**
+	 * PaySignKey对应于支付场景中的appKey值
+	 *
+	 * @const string
+	 */
+	const PAY_SIGN_KEY = '';
 }
